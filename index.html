@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Audio Samples</title>
+</head>
+</title>
+
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+	
+<body>
+
+<h1>IMPROVING ZERO-SHOT STYLE TRANSFER TEXT-TO-SPEECH BY DISENTANGLED FINE-GRAINED STYLE MODELING</h1>
+
+<b>Anonymous submission to Interspeech 2024</b><p>
+
+<h1 id="abstract">Abstract</h1>
+<p>Recent zero-shot style transfer speech synthesis methods have shown promising results tackling challenges with unseen target speakers and styles conditions. While most SOTA approaches achieve generalization to such condition with either very large models or data corpus size or both, achieving the same with a smaller model is not yet addressed. To this end, we propose a novel zero-shot method that uses the Generspeech backbone, with a new fine-grained style encoder that does not rely on an external aligner at inference time. Second, to encourage disentanglement among the speaker, global/fine-grained style and content embeddings, mutual information minimization is used. Third, to disentangle style from speaker and boost style embedding diversity, we introduce a maximum mean discrepancy guided cycle-consistency loss. Finally, for better duration modeling we split the content vector into style-variant and style-invariant parts, that jointly models duration. Experimental results show that we outperforms SOTA zero-shot style transfer methods (GenerSpeech, VALL-E-X, YourTTS) with an average style preference of 72% and with a similarity MOS score of 3.65 on the VCTK test set.</p>
+
+<div>
+<center>
+		<h3>Model Architecture</h3>
+		<figure>
+		  <img src="figure1newest.png" style="width:70%;">
+		</figure>
+</center>
+</div>
+
+<div>
+<center>
+		<h3>Style Encoder</h3>
+		<figure>
+		  <img src="figure2.png" style="width:60%;">
+		</figure>
+</center>
+</div>
+
+<h2>Test Samples for Zero-Shot Style Transfer on VCTK dataset: </h2>
+
+<p><ruby>Reference Text: Like the others, he was arrested.</ruby></p>
+<table>
+	<thead>
+		<tr>
+			<th style="text-align: center">Reference Audio</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+            <td style="text-align: center"><audio controls="" style="width: 150px;"><source src="./samples/website/ref3.wav" type="audio/wav" /></audio></td>
+		</tr>
+	</tbody>
+</table>
+
+<table style="width:100%">
+  <tr>
+    <th>Ours</th>
+    <th>GenerSpeech</th>
+    <th>YourTTS</th>
+    <th>VALL-E-X</th>
+  </tr>
+  <tr>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/ours3.wav"></audio></center></td>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/generspeech3.wav"></audio></center></td>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/yourtts3.wav"></audio></center></td>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/vallex3.wav"></audio></center></td>
+  </tr>
+</table>
+
+<p><ruby>Reference Text: I was scared.</ruby></p>
+<table>
+	<thead>
+		<tr>
+			<th style="text-align: center">Reference Audio</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+            <td style="text-align: center"><audio controls="" style="width: 150px;"><source src="./samples/website/ref4.wav" type="audio/wav" /></audio></td>
+		</tr>
+	</tbody>
+</table>
+
+<table style="width:100%">
+  <tr>
+    <th>Ours</th>
+    <th>GenerSpeech</th>
+    <th>YourTTS</th>
+    <th>VALL-E-X</th>
+  </tr>
+  <tr>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/ours4.wav"></audio></center></td>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/generspeech4.wav"></audio></center></td>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/yourtts4.wav"></audio></center></td>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/vallex4.wav"></audio></center></td>
+  </tr>
+</table>
+
+<p><ruby>Reference Text: Messages have to be reinforced.</ruby></p>
+<table>
+	<thead>
+		<tr>
+			<th style="text-align: center">Reference Audio</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+            <td style="text-align: center"><audio controls="" style="width: 150px;"><source src="./samples/website/ref6.wav" type="audio/wav" /></audio></td>
+		</tr>
+	</tbody>
+</table>
+
+<table style="width:100%">
+  <tr>
+    <th>Ours</th>
+    <th>GenerSpeech</th>
+    <th>YourTTS</th>
+    <th>VALL-E-X</th>
+  </tr>
+  <tr>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/ours6.wav"></audio></center></td>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/generspeech6.wav"></audio></center></td>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/yourtts6.wav"></audio></center></td>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/vallex6.wav"></audio></center></td>
+  </tr>
+</table>
+
+<p><ruby>Reference Text: Chambers said he would accept the place.</ruby></p>
+<table>
+	<thead>
+		<tr>
+			<th style="text-align: center">Reference Audio</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+            <td style="text-align: center"><audio controls="" style="width: 150px;"><source src="./samples/website/ref17.wav" type="audio/wav" /></audio></td>
+		</tr>
+	</tbody>
+</table>
+
+<table style="width:100%">
+  <tr>
+    <th>Ours</th>
+    <th>GenerSpeech</th>
+    <th>YourTTS</th>
+    <th>VALL-E-X</th>
+  </tr>
+  <tr>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/ours17.wav"></audio></center></td>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/generspeech17.wav"></audio></center></td>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/yourtts17.wav"></audio></center></td>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/vallex17.wav"></audio></center></td>
+  </tr>
+</table>
+
+<p><ruby>Reference Text: Sadly, the revival could not be sustained.</ruby></p>
+<table>
+	<thead>
+		<tr>
+			<th style="text-align: center">Reference Audio</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+            <td style="text-align: center"><audio controls="" style="width: 150px;"><source src="./samples/website/ref18.wav" type="audio/wav" /></audio></td>
+		</tr>
+	</tbody>
+</table>
+
+<table style="width:100%">
+  <tr>
+    <th>Ours</th>
+    <th>GenerSpeech</th>
+    <th>YourTTS</th>
+    <th>VALL-E-X</th>
+  </tr>
+  <tr>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/ours18.wav"></audio></center></td>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/generspeech18.wav"></audio></center></td>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/yourtts18.wav"></audio></center></td>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/vallex18.wav"></audio></center></td>
+  </tr>
+</table>
+
+<p><ruby>Reference Text: Mr Blair had done well.</ruby></p>
+<table>
+	<thead>
+		<tr>
+			<th style="text-align: center">Reference Audio</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+            <td style="text-align: center"><audio controls="" style="width: 150px;"><source src="./samples/website/ref19.wav" type="audio/wav" /></audio></td>
+		</tr>
+	</tbody>
+</table>
+
+<table style="width:100%">
+  <tr>
+    <th>Ours</th>
+    <th>GenerSpeech</th>
+    <th>YourTTS</th>
+    <th>VALL-E-X</th>
+  </tr>
+  <tr>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/ours19.wav"></audio></center></td>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/generspeech19.wav"></audio></center></td>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/yourtts19.wav"></audio></center></td>
+    <td><center><b></b></center><center><audio controls><source src="./samples/website/vallex19.wav"></audio></center></td>
+  </tr>
+</table>
+	
+</body>
+
+</html>
