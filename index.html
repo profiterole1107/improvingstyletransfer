@@ -18,11 +18,11 @@ table, th, td {
 
 <h1>IMPROVING ZERO-SHOT STYLE TRANSFER TEXT-TO-SPEECH BY DISENTANGLED FINE-GRAINED STYLE MODELING</h1>
 
-<b>Anonymous submission to Interspeech 2024</b><p>
+<b>Submission to IEEE Signal Processing Letters, 2024</b><p>
 
 <h1 id="abstract">Abstract</h1>
-<p>Recent zero-shot style transfer speech synthesis methods have shown promising results tackling challenges with unseen target speakers and styles conditions. While most SOTA approaches achieve generalization to such condition with either very large models or data corpus size or both, achieving the same with a smaller model is not yet addressed. To this end, we propose a novel zero-shot method that uses the Generspeech backbone, with a new fine-grained style encoder that does not rely on an external aligner at inference time. Second, to encourage disentanglement among the speaker, global/fine-grained style and content embeddings, mutual information minimization is used. Third, to disentangle style from speaker and boost style embedding diversity, we introduce a maximum mean discrepancy guided cycle-consistency loss. Finally, for better duration modeling we split the content vector into style-variant and style-invariant parts, that jointly models duration. Experimental results show that we outperforms SOTA zero-shot style transfer methods (GenerSpeech, VALL-E-X, YourTTS) with an average style preference of 72% and with a similarity MOS score of 3.65 on the VCTK test set.</p>
-
+<p>Recent zero-shot style transfer speech synthesis methods have shown promising results tackling challenges with unseen target speakers and styles. While most SOTA approaches achieve generalization to such conditions with either very large models or large corpora, achieving the same generalization with a smaller model is not yet fully addressed. To this end, we first propose a novel zero-shot method that uses the Generspeech backbone, with a new fine-grained style encoder. Second, to perform disentanglement among the speaker, global/fine-grained style and content embeddings, mutual information minimization is used. Third, to further disentangle style from speaker and boost style embedding diversity, we introduce a maximum mean discrepancy guided cycle-consistency loss. Experimental results show that we outperform the baseline zero-shot style transfer methods with an average style preference of 72% and a similarity MOS score of 3.65 on the VCTK test set.</p>
+	
 <div>
 <center>
 		<h3>Model Architecture</h3>
